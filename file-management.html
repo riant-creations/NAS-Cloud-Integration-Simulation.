@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Management</title>
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar-Logo">
+            <img src="/unilorin-logo.png" alt="" />
+            </div>
+            <h3>University<br/>
+                <div class="of">of Ilorin</div>
+                  </h3>
+        <header class="top-bar">
+            <h2>Welcome back, John Doe</h2>
+            <nav class="top-nav">
+              <div class="nav">  <a href="./index.html" id="nav-home"><i class="fa-solid fa-home"></i> Home</a>
+                <a href="./file-management.html" id="nav-files"><i class="fa-solid fa-server"></i> File Management</a></div>
+              </nav>
+            </header>
+            </div>
+            <!-- Main Content Area -->
+            <div class="main-content">
+                <section class="file-page">
+                    <h2>File Upload</h2>
+                    <form id="upload-form">
+                        <label for="file-category">Select File Category:</label>
+                        <select id="file-category" name="category" required>
+                            <option value="course-form">Course Form</option>
+                            <option value="school-fees-receipt">School Fees Receipt</option>
+                            <option value="waec-result">WAEC Result</option>
+                            <option value="jamb-result">JAMB Result</option>
+                            <option value="jamb-admission-letter">JAMB Admission Letter</option>
+                            <option value="birth-certificate">Birth Certificate</option>
+                            <option value="state-of-origin">State of Origin Certificate</option>
+                        </select>
+                        <label for="fileInput">Upload File:</label>
+                        <input type="file" id="fileInput" name="file" accept=".pdf,.doc,.docx,.jpg,.png">
+                        <button type="submit">Upload</button>
+                    </form>
+                </section>
+                <section id="file-list-section">
+                    <h2>Files</h2>
+                    <ul class="file-categories-list">
+                        <li>
+                            <button class="category-toggle" data-category="course-form">Course Form  <i class="fa-solid fa-arrow-down"></i></button>
+                            <ul class="file-list-dropdown" id="course-form-files" style="display: none;">
+                                <!-- Files under Course Form will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="category-toggle" data-category="school-fees-receipt">School Fees Receipt</button>
+                            <ul class="file-list-dropdown" id="school-fees-receipt-files" style="display: none;">
+                                <!-- Files under School Fees Receipt will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="category-toggle" data-category="waec-result">WAEC Result</button>
+                            <ul class="file-list-dropdown" id="waec-result-files" style="display: none;">
+                                <!-- Files under WAEC Result will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="category-toggle" data-category="jamb-result">JAMB Result</button>
+                            <ul class="file-list-dropdown" id="jamb-result-files" style="display: none;">
+                                <!-- Files under JAMB Result will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="category-toggle" data-category="jamb-admission-letter">JAMB Admission Letter</button>
+                            <ul class="file-list-dropdown" id="jamb-admission-letter-files" style="display: none;">
+                                <!-- Files under JAMB Admission Letter will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="category-toggle" data-category="birth-certificate">Birth Certificate</button>
+                            <ul class="file-list-dropdown" id="birth-certificate-files" style="display: none;">
+                                <!-- Files under Birth Certificate will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <button class="category-toggle" data-category="state-of-origin">State of Origin Certificate</button>
+                            <ul class="file-list-dropdown" id="state-of-origin-files" style="display: none;">
+                                <!-- Files under State of Origin Certificate will be dynamically added here -->
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+
+                 <section class="archived-files-section">
+                    <h2>Archived Files</h2>
+                    <ul class="archived-files-list">
+                        <li>
+                            <a href="#" class="toggle-link" data-target="archived-course-form-files">Course Form</a>
+                            <ul class="file-list-dropdown" id="archived-course-form-files" style="display: none;">
+                                <!-- Archived files under Course Form will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle-link" data-target="archived-school-fees-receipt-files">School Fees Receipt</a>
+                            <ul class="file-list-dropdown" id="archived-school-fees-receipt-files" style="display: none;">
+                                <!-- Archived files under School Fees Receipt will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle-link" data-target="archived-waec-result-files">WAEC Result</a>
+                            <ul class="file-list-dropdown" id="archived-waec-result-files" style="display: none;">
+                                <!-- Archived files under WAEC Result will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle-link" data-target="archived-jamb-result-files">JAMB Result</a>
+                            <ul class="file-list-dropdown" id="archived-jamb-result-files" style="display: none;">
+                                <!-- Archived files under JAMB Result will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle-link" data-target="archived-jamb-admission-letter-files">JAMB Admission Letter</a>
+                            <ul class="file-list-dropdown" id="archived-jamb-admission-letter-files" style="display: none;">
+                                <!-- Archived files under JAMB Admission Letter will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle-link" data-target="archived-birth-certificate-files">Birth Certificate</a>
+                            <ul class="file-list-dropdown" id="archived-birth-certificate-files" style="display: none;">
+                                <!-- Archived files under Birth Certificate will be dynamically added here -->
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" class="toggle-link" data-target="archived-state-of-origin-files">State of Origin Certificate</a>
+                            <ul class="file-list-dropdown" id="archived-state-of-origin-files" style="display: none;">
+                                <!-- Archived files under State of Origin Certificate will be dynamically added here -->
+                            </ul>
+                        </li>
+                    </ul>
+                </section>
+                <footer>
+                    <p>&copy; 2025 File Storage Simulation</p>
+                </footer>
+            </div>
+            <script src="/script.js"></script>
+    </body>
+</html>
